@@ -1,6 +1,6 @@
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const { merge } = require('webpack-merge')
-const { webpackConfig: baseConfig, resolve } = require('./webpack.base.cjs')
+const { webpackConfig: baseConfig, resolve } = require('./webpack.base.js')
 
 module.exports = merge(baseConfig, {
     entry: {

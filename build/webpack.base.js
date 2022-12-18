@@ -8,7 +8,7 @@ const resolve = (str) => {
 const webpackConfig = {
     output: {
         filename: '[name].bundle.js',
-        path: resolve('dist')
+        path: resolve('../dist')
     },
     resolve: {
         extensions: ['.js', '.vue'],
@@ -34,7 +34,7 @@ const webpackConfig = {
             {
                 test: /.css$/,
                 use: [
-                    'style-loader',
+                    'vue-style-loader',
                     'css-loader'
                 ]
             }
