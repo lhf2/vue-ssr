@@ -2,9 +2,10 @@
   "name": "vue-ssr",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --progress --config ./build/webpack.config.js"
+    "dev": "webpack serve --progress --config ./build/webpack.config.cjs"
   },
   "keywords": [],
   "author": "",

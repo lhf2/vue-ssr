@@ -1,10 +1,14 @@
 const path = require('path')
+// import path from 'path'
 const { VueLoaderPlugin } = require('vue-loader')
+// import { VueLoaderPlugin } from 'vue-loader'
 const htmlWebpackPlugin = require('html-webpack-plugin')
+// import HtmlWebpackPlugin from 'html-webpack-plugin'
 const resolve = (str) => {
     return path.resolve(__dirname, str)
 }
-module.exports = {
+
+const webpackConfig = {
     entry: resolve('../src/main.js'),
     output: {
         filename: 'bundle.js',
@@ -46,3 +50,5 @@ module.exports = {
     ],
     mode: 'development'
 }
+
+module.exports = webpackConfig
