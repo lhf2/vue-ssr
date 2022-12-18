@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --progress --config ./build/webpack.config.cjs"
+    "dev": "webpack serve --progress --config ./build/webpack.client.cjs"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,7 @@
     "vue-loader": "^17.0.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
   }
 }
