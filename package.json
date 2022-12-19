@@ -8,7 +8,7 @@
     "client:build": "webpack --progress --config ./build/webpack.client.js",
     "server:dev": "webpack serve --progress --config ./build/webpack.server.js",
     "server:build": "webpack --progress --config ./build/webpack.server.js",
-    "ssr": "npm run client:build && npm run server:build && nodemon server.js"
+    "ssr": "npm run server:build && npm run client:build && nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +16,8 @@
   "dependencies": {
     "express": "^4.18.2",
     "html-webpack-plugin": "^5.5.0",
-    "vue": "^3.2.45"
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",

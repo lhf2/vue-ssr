@@ -8,6 +8,7 @@ module.exports = merge(baseConfig, {
     },
     target: 'node', 
     output:{
+        path: resolve('../dist/server'),
         libraryTarget: 'commonjs2' // 以commonjs规范导出
     },  
     plugins: [

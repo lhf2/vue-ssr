@@ -6,6 +6,10 @@ module.exports = merge(baseConfig, {
     entry: {
         client: resolve('../src/entry-client.js')
     },
+    output: {
+        // 以免造成覆盖
+        path: resolve('../dist/client')
+    },
     plugins: [
         new htmlWebpackPlugin({
             filename: 'index.html',
