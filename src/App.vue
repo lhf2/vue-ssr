@@ -12,14 +12,19 @@
     <div>
         <!-- store -->
         <div>{{ $store.state.name }}</div>
-        <button @click="updateName">更新 name</button>
+        <!-- <button @click="updateName">更新 name</button> -->
     </div>
 
 </template>
 <script setup>
-import { useStore } from 'vuex'
-const store = useStore()
-const updateName = () => {
-    store.dispatch('set_user')
-}
+    import { onMounted } from '@vue/runtime-core'
+    import { useStore } from 'vuex'
+    const store = useStore()
+    // const updateName = () => {
+    //     store.dispatch('set_user')
+    // }
+    onMounted(() => {
+        store.dispatch('set_user')
+    })
+
 </script>
