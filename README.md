@@ -2,7 +2,7 @@
 ## SSR
 传统的服务端渲染技术有 PHP/JSP 等
 ### 服务端渲染的工作流程：
-![image](../vue-ssr/images/ssr.png)
+![image](ssr.png)
 (1) 用户通过浏览器请求站点。
 (2) 服务器请求 API 获取数据。
 (3) 接口返回数据给服务器。
