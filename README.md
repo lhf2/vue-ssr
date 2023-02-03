@@ -2,7 +2,7 @@
 ## SSR
 传统的服务端渲染技术有 PHP/JSP 等
 ### 服务端渲染的工作流程：
-![image](https://github.com/lhf2/vue-ssr/tree/main/images/ssr.png)
+![image](https://github.com/lhf2/vue-ssr/blob/main/images/ssr.png)
 (1) 用户通过浏览器请求站点。
 (2) 服务器请求 API 获取数据。
 (3) 接口返回数据给服务器。
@@ -13,7 +13,7 @@
 ## CSR
 后来 ajax 问世，CSR 是在浏览器中完成模板与数据的融合，并渲染出最终的 HTML 页面。
 ### 客户端渲染的工作流程：
-![image](https://github.com/lhf2/vue-ssr/tree/main/images/csr.png)
+![image](https://github.com/lhf2/vue-ssr/blob/main/images/csr.png)
 （1）客户端向服务器或 CDN 发送请求，获取静态的 HTML 页面。注意，此时获取的 HTML 页面通常是空页面。在 HTML 页面中，会包含 <style>、<link> 和 <script> 等标签。
 （2）虽然 HTML 页面是空的，但浏览器仍然会解析 HTML 内容。由于HTML 页面中存在 ```<link rel="stylesheet">``` 和 ```<script>``` 等标签，所以浏览器会加载 HTML 中引用的资源，例如 app.css和 app.js。接着，服务器或 CDN 会将相应的资源返回给浏览器，浏览器对 CSS 和 JavaScript 代码进行解释和执行。因为页面的渲染任务是由 JavaScript 来完成的，所以当 JavaScript被解释和执行后，才会渲染出页面内容，即“白屏”结束。但初始渲染出来的内容通常是一个“骨架”，因为还没有请求 API 获取数据。
 （3）客户端再通过 AJAX 技术请求 API 获取数据，一旦接口返回数据，客户端就会完成动态内容的渲染，并呈现完整的页面。
@@ -26,7 +26,7 @@ CSR：SEO 不友好、有白屏问题、占用服务器资源少、用户体验�
 ## 同构
 同构渲染分为首次渲染（即首次访问或刷新页面）ssr 以及非首次渲染 csr（页面交互）。
 同构渲染的“同构”一词的含义是，同样一套代码既可以在服务端运行，也可以在客户端运行。所以需要两个入口分别进行打包；
-![image](https://github.com/lhf2/vue-ssr/tree/main/images/同构.jpeg)
+![image](https://github.com/lhf2/vue-ssr/blob/main/images/同构.jpeg)
 每次调用 render 函数进行服务端渲染时，都会为当前请求调用 createSSRApp 函数来创建一个新的应用实例。这是为了避免不同请求共用同一个应用实例所导致的状态污染。
 ```
 // 每个服务端都要生成一个实例
